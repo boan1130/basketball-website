@@ -1,9 +1,12 @@
-export enum Position {
-  PG = "控球後衛",
-  SG = "得分後衛",
-  SF = "小前鋒",
-  PF = "大前鋒",
-  C = "中鋒"
+export interface Game {
+  id: number;
+  date: string;
+  time: string;
+  homeTeam: string;
+  awayTeam: string;
+  homeScore: number | null; 
+  awayScore: number | null; 
+  venue: string;
 }
 
 export interface Player {
@@ -16,12 +19,10 @@ export interface Player {
   height: string;
 }
 
-export interface Game {
-  id: number;
-  date: string;
-  homeTeam: string;
-  awayTeam: string;
-  homeScore?: number;
-  awayScore?: number;
-  venue: string;
+export enum Position {
+  PG = "控球後衛",
+  SG = "得分後衛",
+  SF = "小前鋒",
+  PF = "大前鋒",
+  C = "中鋒"
 }

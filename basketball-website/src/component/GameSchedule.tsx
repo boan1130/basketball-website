@@ -1,50 +1,57 @@
 import React from 'react';
+import GameTable from './GameTable';
 import { Game } from '../interface/types';
 
 const GameSchedule: React.FC = () => {
- const games: Game[] = [
-   {
-     id: 1,
-     date: "2024-02-20", 
-     homeTeam: "中華台北",
-     awayTeam: "日本",
-     homeScore: 80,
-     awayScore: 75,
-     venue: "新竹縣體育館"
-   }
- ];
+  const games: Game[] = [
+    {
+      id: 1,
+      date: "2024/02/22",
+      time: "19:00",
+      homeTeam: "中華台北",
+      awayTeam: "紐西蘭",
+      homeScore: 69,
+      awayScore: 89,
+      venue: "紐西蘭勝",
+    },
+    {
+      id: 2,
+      date: "2024/02/25",
+      time: "19:30",
+      homeTeam: "菲律賓",
+      awayTeam: "中華台北",
+      homeScore: 106,
+      awayScore: 53,
+      venue: "菲律賓勝",
+    },
+    {
+      id: 3,
+      date: "2024/11/21",
+      time: "19:00",
+      homeTeam: "中國香港",
+      awayTeam: "中華台北",
+      homeScore: null,
+      awayScore: null,
+      venue: "TBD",
+    },
+    {
+      id: 4,
+      date: "2024/11/25",
+      time: "14:00",
+      homeTeam: "中華台北",
+      awayTeam: "紐西蘭",
+      homeScore: null,
+      awayScore: null,
+      venue: "TBD",
+    },
+  ];
 
- return (
-   <div className="overflow-x-auto">
-     <table className="min-w-full bg-white shadow-md rounded">
-       <thead className="bg-gray-100">
-         <tr>
-           <th className="py-2 px-4">日期</th>
-           <th className="py-2 px-4">主隊</th>
-           <th className="py-2 px-4">客隊</th>
-           <th className="py-2 px-4">比分</th>
-           <th className="py-2 px-4">場地</th>
-         </tr>
-       </thead>
-       <tbody>
-         {games.map(game => (
-           <tr key={game.id} className="border-b hover:bg-gray-50">
-             <td className="py-2 px-4">{game.date}</td>
-             <td className="py-2 px-4">{game.homeTeam}</td>
-             <td className="py-2 px-4">{game.awayTeam}</td>
-             <td className="py-2 px-4">
-               {game.homeScore !== undefined && game.awayScore !== undefined
-                 ? `${game.homeScore} - ${game.awayScore}`
-                 : '未開始'
-               }
-             </td>
-             <td className="py-2 px-4">{game.venue}</td>
-           </tr>
-         ))}
-       </tbody>
-     </table>
-   </div>
- );
+  return (
+    <div>
+      <h2 className="text-xl font-bold mb-4">亞洲盃資格賽</h2>
+      <GameTable games={games} />
+    </div>
+  );
 };
 
 export default GameSchedule;
