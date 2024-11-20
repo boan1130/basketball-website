@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   css: {
-    postcss: './postcss.config.cjs', // 確保 postcss.config.cjs 存在
+    postcss: './postcss.config.cjs',
   },
-  base: './', // 使用相對路徑，確保資源在不同伺服器環境下正確加載
+  base: '/chinese-taipei/', // 改為你的 repository 名稱
 });
