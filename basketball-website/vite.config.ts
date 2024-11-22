@@ -6,5 +6,5 @@ export default defineConfig({
   css: {
     postcss: './postcss.config.cjs',
   },
-  base: '/chinese-taipei/', // 改為你的 repository 名稱
+  base: '/basketball-website/', // 改為你的 repository 名稱
 });

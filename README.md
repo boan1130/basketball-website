@@ -1,5 +1,8 @@
-# chinese-taipei
+# basketball-website
 # 中華隊籃球夢網站
+
+## pages連結
+ https://boan1130.github.io/basketball-website/
 
 ## 專案簡介
 這是一個專門介紹中華隊籃球的網站，作為一個熱愛籃球的大學生，我希望能夠透過這個網站讓更多人了解中華隊。網站主要展示中華隊球員資訊、賽程和最新消息。
